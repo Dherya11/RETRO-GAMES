@@ -1,13 +1,12 @@
 # RETRO-GAMES
 # cool games 
 
-SPACE INVADERS - a retro game
-#CONTROLS PLAYER MOVEMENT --> UP, DOWN , RIGHT, LEFT  
-PLAYER SHOOTING --> SPACE BAR
+# ALL TYPES OF GAMES 
+new game and interesting things
+# wierd controls and player movements 
+with game sound like retro, edm, punk music in games 
 
-THEIR IS HEALTH BAR WHICH GOES ---> -10 HEALTH AT EACH HIT WITH ENEMY SHIP
-
-# lives and level on top bar 
-WHEN ENEMY SHIP REACHES BOTTOM THE LIVE DECREASES '
+# FUN GAME 
+check it out 
 
 # all assets in folder .....
