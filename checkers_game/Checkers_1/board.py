@@ -2,7 +2,7 @@ import pygame
 from .constants import BLACK, ROWS, RED, SQUARE_SIZE, COLS, WHITE
 from .piece import Piece
 
-MAIN BOARD THINGS
+# MAIN BOARD THINGS
 class Board:
     def __init__(self):
         self.board = []
@@ -167,3 +167,4 @@ class Board:
     
 
     
+
