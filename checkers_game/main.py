@@ -1,7 +1,8 @@
-
+# THE MAIN GAME FILE
 import pygame
 from checkers1.constants import WIDTH, HEIGHT, SQUARE_SIZE, RED, WHITE
 from checkers1.game import Game
+# MINI-MAX FROM ALGORITHM
 from minimax.algorithm import minimax
 import os
 pygame.mixer.init()
@@ -31,7 +32,8 @@ def main():
 
     while run:
         clock.tick(FPS)
-        
+        # IN THIS THE YOU CAN INCREASE THE DEPTH OF ALGO (LIKE 4 -- 5) WILL PERFORM BETTER BUT AI WILL TAKE MORE TIME TO SELECT WHICH PIECE TO MOVE AS THE BRANCHES GOES MORE DEEP
+        # ALPHA - BETA puring can be used 
         if game.turn == WHITE:
             value, new_board = minimax(game.get_board(), 4, WHITE, game)
             game.ai_move(new_board)
@@ -52,5 +54,6 @@ def main():
         game.update()
     
     pygame.quit()
+
 
 main()
