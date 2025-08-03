@@ -2,13 +2,15 @@ import pygame
 from .constants import BLACK, ROWS, RED, SQUARE_SIZE, COLS, WHITE
 from .piece import Piece
 
+MAIN BOARD THINGS
 class Board:
     def __init__(self):
         self.board = []
         self.red_left = self.white_left = 12
         self.red_kings = self.white_kings = 0
         self.create_board()
-    
+
+    # RED AND BLACK SQUARES
     def draw_squares(self, win):
         win.fill(BLACK)
         for row in range(ROWS):
@@ -17,6 +19,7 @@ class Board:
     def evaluate(self):
         return self.white_left - self.red_left + (self.white_kings * 0.5 - self.red_kings * 0.5 )
     
+    # PIECES ON BOARD ______>
     def get_all_pieces(self, color):
         pieces = []
         for row in self.board:
@@ -24,7 +27,8 @@ class Board:
                 if piece != 0 and piece.color == color:
                     pieces.append(piece)
         return pieces            
-    
+
+    # PIECES MOVEMENT LOGIC
     def move(self, piece, row, col):
         self.board[piece.row][piece.col], self.board[row][col] = self.board[row][col], self.board[piece.row][piece.col]
         piece.move(row, col)
@@ -77,7 +81,8 @@ class Board:
             return RED
         
         return None 
-    
+        
+    # KING AND VALID MOVES 
     def get_valid_moves(self, piece):
         moves = {}
         left = piece.col - 1
@@ -92,7 +97,8 @@ class Board:
             moves.update(self._traverse_right(row +1, min(row+3, ROWS), 1, piece.color, right))
     
         return moves
-
+        
+    # TRAVERSING LEFT AND RIGHT 
     def _traverse_left(self, start, stop, step, color, left, skipped=[]):
         moves = {}
         last = []
@@ -159,4 +165,5 @@ class Board:
         
         return moves
     
+
     
