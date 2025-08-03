@@ -4,6 +4,7 @@ import pygame
 RED = (255, 0, 0)
 WHITE = (255, 255, 255)
 
+#THE MAIN MINI-MAX ALGORITHM 
 def minimax(position, depth, max_player, game):
     if depth == 0 or position.winner() != None:
         return position.evaluate(), position
@@ -50,7 +51,7 @@ def get_all_moves(board, color, game):
             moves.append(new_board)
             
     return moves        
-                      
+# THIS IS THE TRACKER FOR PIECE LIKE HOW TO MOVE BUT ITS DOING WIERD THINGS SO COMMENT IT                       
 # def draw_moves(game, board, piece):
 #     valid_moves = board.get_valid_moves(piece)
 #     board.draw(game.win)
@@ -59,4 +60,5 @@ def get_all_moves(board, color, game):
 #     pygame.display.update()
 #     pygame.time.delay(100)  # Delay to visualize the moveś
     
+
                               
