@@ -3,7 +3,15 @@ import pygame
 from checkers1.constants import WIDTH, HEIGHT, SQUARE_SIZE, RED, WHITE
 from checkers1.game import Game
 from minimax.algorithm import minimax
+import os
+pygame.mixer.init()
 
+# Background music
+SOUND_PATH = os.path.join(os.path.dirname(__file__), "sounds")
+
+pygame.mixer.music.load(os.path.join(SOUND_PATH, "background-music.mp3"))
+pygame.mixer.music.set_volume(0.5)  # Volume: 0.0 to 1.0
+pygame.mixer.music.play(-1)
 
 FPS = 60
 
