@@ -1,0 +1,1 @@
+# 2d platformer game - NINJA FROG , player can move in 2d and can jump and double jump through spacebar , and the animation is done thorugh sprites in loops that creates a looping animation , cool game and make new things check it out !!!
